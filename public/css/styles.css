@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    line-height: 1.8;
+    color: #e0e0e0;
+    background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)),
+                url('/css/cathedral.jpg') center/cover fixed;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.blog-post {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 50px 60px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #404040;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #f5f5f5;
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.meta {
+    color: #999;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #f0f0f0;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .blog-post {
+        padding: 30px 25px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+    background: #505050;
+    color: #fff;
+}
