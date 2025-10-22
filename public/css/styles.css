@@ -9,7 +9,7 @@ body {
     line-height: 1.8;
     color: #e0e0e0;
     background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.85)),
-                url('/css/cathedral.jpg') center/cover fixed;
+                url('/images/cathedral.jpg') center/cover fixed;
     min-height: 100vh;
 }
 
@@ -93,4 +93,56 @@ html {
 ::selection {
     background: #505050;
     color: #fff;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(60, 60, 60, 0.6), rgba(40, 40, 40, 0.8));
+    border: 1px solid #505050;
+    border-radius: 6px;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+a:hover {
+    background: linear-gradient(135deg, rgba(80, 80, 80, 0.7), rgba(60, 60, 60, 0.9));
+    border-color: #707070;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+a:hover::before {
+    left: 100%;
+}
+
+a:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* For links within paragraphs (inline links) */
+p a {
+    padding: 4px 10px;
+    margin: 0 2px;
+    font-size: inherit;
+    vertical-align: baseline;
 }
